@@ -1,7 +1,9 @@
 import throttle from 'lodash.throttle'
 
 const feedbackFormRef = document.querySelector(".feedback-form");
-
+// const submitBtn = document.querySelector("button");
+// console.log(submitBtn);
+// submitBtn.disabled = true;
 
 feedbackFormRef.addEventListener("input", throttle(onFormInput, 500));
 feedbackFormRef.addEventListener("submit", onFormSubmit)
@@ -9,11 +11,12 @@ feedbackFormRef.addEventListener("submit", onFormSubmit)
 populateForm();
 
 function onFormInput(event) {
-        
+           
     if (event.currentTarget) {
         localStorage.setItem("feedback-form-state", JSON.stringify({ email: event.currentTarget.email.value, message: event.currentTarget.message.value }));
+       
+        
     };
-
     
 };
 

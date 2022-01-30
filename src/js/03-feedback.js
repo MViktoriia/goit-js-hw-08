@@ -14,11 +14,11 @@ refs.form.addEventListener("submit", onFormSubmit)
 populateForm();
 
 function onFormInput(event) {
-    console.log(event.target.name);
-    console.log(event.target.value);
+    // console.log(event.target.name);
+    // console.log(event.target.value);
 
     formData[event.target.name] = event.target.value;
-    console.log(formData);
+    // console.log(formData);
 
     localStorage.setItem(STORAGE_KEY, JSON.stringify(formData));
 
